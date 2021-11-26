@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_categories",
+  "info": {
+    "name": "sub category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "icon": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "picture": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "advertisements": {
+      "via": "sub_categories",
+      "collection": "advertisement"
+    },
+    "category": {
+      "via": "sub_categories",
+      "model": "category"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "activity-log.index",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

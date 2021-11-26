@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advertisement_pictures",
+  "info": {
+    "name": "advertisement picture",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "picture_brief": {
+      "type": "string"
+    },
+    "advertisement": {
+      "model": "advertisement",
+      "via": "advertisement_pictures"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.container-c1 {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.header-1 {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-left: 3px;
+  text-align: left;
+}
+.namespace-1 {
+  justify-content: space-between;
+}
+.d1 {
+  position: relative;
+  width: 100%;
+  padding-right: 15 px;
+  padding-left: 35 px;
+}
+.container-c2 {
+  width: 100%;
+  height: 75%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 3px;
+  padding-right: 10px;
+  background-color: white;
+}
+.container-c4 {
+  width: 100%;
+  height: 75%;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+}
+.container-c3 {
+  margin: 15px;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.sizeBox {
+  height: 50px;
+}
+
+.button-11 {
+  /* -color:#6DBB1A;background */
+  border-radius: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  padding-bottom: 3px;
+  height: 30px;
+  background-color: #6dbb1a;
+
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  min-width: 150px;
+}
+.button-2 {
+  /* background-color: rgb(231, 87, 87); */
+  border-radius: 2px;
+  height: 30px;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  padding-bottom: 3px;
+  min-width: 150px;
+  margin-left: 10px;
+  background-color: red;
+  text-align: center;
+}
+.button-22 {
+  /* background-color: rgb(231, 87, 87); */
+  border-radius: 2px;
+  height: 30px;
+  color: #b4b6ba;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  padding-bottom: 3px;
+  min-width: 150px;
+  margin-left: 10px;
+  background-color: #e9eaeb;
+  text-align: center;
+}
+.btn-dev {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  padding-left: 50%;
+  padding-right: 60px;
+}

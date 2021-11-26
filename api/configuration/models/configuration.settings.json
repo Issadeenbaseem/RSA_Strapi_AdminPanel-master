@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "configuration_s",
+  "info": {
+    "name": "configuration",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "advertisement_duration": {
+      "type": "integer"
+    },
+    "advertisement_price": {
+      "type": "decimal"
+    },
+    "advertisement_length_description": {
+      "type": "integer"
+    },
+    "advertisement_no_max_pictures": {
+      "type": "integer"
+    },
+    "advertisement_no_max_videos": {
+      "type": "integer"
+    },
+    "advertisement_picture_heights": {
+      "type": "integer"
+    },
+    "advertisement_picture_width": {
+      "type": "integer"
+    },
+    "enable_video": {
+      "type": "boolean"
+    },
+    "video_size": {
+      "type": "integer"
+    }
+  }
+}

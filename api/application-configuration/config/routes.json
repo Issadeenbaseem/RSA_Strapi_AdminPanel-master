@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/application-configurations",
+      "handler": "application-configuration.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/application-configurations/count",
+      "handler": "application-configuration.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/application-configurations/:id",
+      "handler": "application-configuration.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/application-configurations",
+      "handler": "application-configuration.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/application-configurations/:id",
+      "handler": "application-configuration.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/application-configurations/:id",
+      "handler": "application-configuration.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

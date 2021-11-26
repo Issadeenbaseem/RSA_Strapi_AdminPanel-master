@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "transactions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "customers": {
+      "via": "transaction",
+      "collection": "customer"
+    },
+    "advertisement": {
+      "model": "advertisement"
+    },
+    "reference_no_to_payment_gateway": {
+      "type": "string",
+      "required": true
+    },
+    "reference_no_from_payment_gateway": {
+      "type": "string",
+      "required": true
+    },
+    "transaction_log_details": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

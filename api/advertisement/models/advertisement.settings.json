@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advertisements",
+  "info": {
+    "name": "advertisement",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "approved_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date",
+      "required": true
+    },
+    "last_updated_date": {
+      "type": "date",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Reject"
+      ],
+      "default": "Pending",
+      "required": true
+    },
+    "customer": {
+      "via": "advertisements",
+      "model": "customer"
+    },
+    "city": {
+      "via": "advertisements",
+      "model": "city"
+    },
+    "admin_user": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "sub_categories": {
+      "via": "advertisements",
+      "collection": "sub-category",
+      "dominant": true
+    },
+    "advertisement_pictures": {
+      "via": "advertisement",
+      "collection": "advertisement-picture"
+    },
+    "advertisement_video": {
+      "via": "advertisements",
+      "model": "advertisement-video"
+    }
+  }
+}

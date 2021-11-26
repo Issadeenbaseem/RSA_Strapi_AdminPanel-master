@@ -1,0 +1,15 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_types",
+  "info": {
+    "name": "user_type",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

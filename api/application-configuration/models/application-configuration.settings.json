@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "application_configurations",
+  "info": {
+    "name": "application configuration",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "configuration": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "integer"
+    }
+  }
+}

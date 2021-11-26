@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "name": "activity",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contentType": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "content": {
+      "type": "json"
+    },
+    "details": {
+      "type": "json"
+    },
+    "content1": {
+      "type": "json"
+    }
+  }
+}

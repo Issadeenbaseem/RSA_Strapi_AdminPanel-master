@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "customer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "profile_picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female",
+        "Other"
+      ]
+    },
+    "advertisements": {
+      "via": "customer",
+      "collection": "advertisement"
+    },
+    "transaction": {
+      "via": "customers",
+      "model": "transactions"
+    },
+    "DOB": {
+      "type": "date"
+    }
+  }
+}

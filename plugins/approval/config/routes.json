@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "method": "PUT",
+      "path": "/:id",
+      "handler": "approval.update",
+      "config": {
+        "policies": []
+      }
+      
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "approval.index",
+      "config": {
+        "policies": []
+      }
+      
+    },
+    {
+      "method": "GET",
+      "path": "/api/:id",
+      "handler": "approval.show",
+      "config": {
+        "policies": []
+      }
+      
+    }
+    
+  ]
+}

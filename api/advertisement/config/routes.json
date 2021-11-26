@@ -1,0 +1,101 @@
+{
+  "routes": [
+    {
+
+      "method": "GET",
+      "path": "/advertisements/approved/:id",
+      "handler": "advertisement.getPendingAd",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+
+      "method": "GET",
+      "path": "/advertisements/approved",
+      "handler": "advertisement.approved",
+      "config": {
+        "policies": []
+      }
+    },
+
+
+
+    {
+      "method": "GET",
+      "path": "/advertisements",
+      "handler": "advertisement.find",
+      "config": {
+        "policies": []
+
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/advertisements/count",
+      "handler": "advertisement.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/advertisements/advertisements_panding_count",
+      "handler": "advertisement.advertisements_panding_count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/advertisements/advertisements_approved_count",
+      "handler": "advertisement.advertisements_approved_count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/advertisements/advertisements_reject_count",
+      "handler": "advertisement.advertisements_reject_count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/advertisements/:id",
+      "handler": "advertisement.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/advertisements",
+      "handler": "advertisement.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/advertisements/:id",
+      "handler": "advertisement.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/advertisements/:id",
+      "handler": "advertisement.delete",
+      "config": {
+        "policies": []
+      }
+    }
+
+
+  ]
+}
+

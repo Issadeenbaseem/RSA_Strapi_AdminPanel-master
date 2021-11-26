@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_category_field_enablements",
+  "info": {
+    "name": "sub category field enablement",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "enable_title": {
+      "type": "boolean",
+      "required": true
+    },
+    "enable_description": {
+      "type": "boolean",
+      "required": true
+    },
+    "enable_price": {
+      "type": "boolean",
+      "required": true
+    },
+    "enable_picture": {
+      "type": "boolean",
+      "required": true
+    },
+    "enable_video": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}
