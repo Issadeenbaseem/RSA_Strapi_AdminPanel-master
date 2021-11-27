@@ -4,6 +4,10 @@ import axios from "axios";
 import Table from "./table";
 import Wrapper from "./Wrapper";
 
+const api = axios.create({
+  baseURL:`http://localhost:1337`
+})
+
 export default class HomePage extends Component {
   constructor() {
     super();
@@ -19,7 +23,7 @@ export default class HomePage extends Component {
   }
 
   async getAll() {
-    axios.get("http://localhost:1337/advertisements/approved/").then((res) => {
+    api.get("/advertisements/approved/").then((res) => {
       this.setState({
         data: res.data,
       });
@@ -33,7 +37,7 @@ export default class HomePage extends Component {
   };
 
   create = (data) => {
-    axios.put(`http://localhost:1337/Approval/${data.id}`, data).then((res) => {
+    api.put(`/Approval/${data.id}`, data).then((res) => {
       this.getAll();
     });
     console.log(data);

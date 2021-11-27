@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import Background from "../../assets/images/background_empty.jpg"
+import './app.css'
 import axios from 'axios';
 import { camelCase, get, omit, upperFirst } from 'lodash';
 import { Redirect, useRouteMatch, useHistory } from 'react-router-dom';
@@ -289,7 +290,7 @@ const AuthPage = ({ hasAdmin, setHasAdmin }) => {
   }
 
   return (
-    <div style={{ backgroundImage: `url(${Background})` }}>
+    <div className="auth-page" style={{ backgroundImage: `url(${Background})` }}>
       <Padded bottom size="md">
       <PageTitle title={upperFirst(authType)} />
       <NavTopRightWrapper>

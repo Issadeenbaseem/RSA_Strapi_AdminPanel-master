@@ -36,7 +36,7 @@ const colors = {
   leftMenu: {
     'link-hover': '',
     'link-color': '#ffffff',
-    'title-color': '#F71735',
+    'title-color': '#008fce',
     'background-header-link': 'white',
   },
   strapi: {
@@ -44,8 +44,9 @@ const colors = {
     gray: '#535f76',
     'blue-darker': '#18202e',
     'blue-dark': '#151c2e',
-    blue: '#0097f7',
+    blue: '#008fce',
   },
 };
 
 export default colors;
+

@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "This is the description of the plugin.",
   "strapi": {
-    "name": "ActivityLog",
-    "icon": "plug",
+    "name": "Activity Log",
+    "icon": "atlas",
     "description": "Description of ActivityLog plugin."
   },
   "dependencies": {},

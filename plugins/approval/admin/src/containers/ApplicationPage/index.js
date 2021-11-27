@@ -12,13 +12,10 @@ import { ListGroup } from "react-bootstrap";
 import Gallery from "react-grid-gallery";
 //import "bootstrap/dist/css/bootstrap.min.css";
 
-// import {
-//   CarouselProvider,
-//   Slider,
-//   Slide,
-//   ButtonBack,
-//   ButtonNext,
-// } from "pure-react-carousel";
+
+const api = axios.create({
+  baseURL:`http://localhost:1337`
+})
 
 class index extends Component {
   constructor() {
@@ -48,9 +45,9 @@ class index extends Component {
   
 
   async getId() {
-    await axios
+    await api
       .get(
-        `http://localhost:1337/advertisements/approved/${this.props.match.params.id}`
+        `/advertisements/approved/${this.props.match.params.id}`
       )
       .then((res) => {
         this.setState({
@@ -81,7 +78,7 @@ class index extends Component {
       approved_date: new Date().toISOString()
      }
 
-    axios.put(`http://localhost:1337/Approval/${data.id}`, data).then((res) => {
+    api.put(`/Approval/${data.id}`, data).then((res) => {
       // this.getAll();
       // console.log(res);
     });
@@ -102,7 +99,7 @@ class index extends Component {
       status: "Reject",
     };
 
-    axios.put(`http://localhost:1337/Approval/${data.id}`, data).then((res) => {
+    axios.put(`/Approval/${data.id}`, data).then((res) => {
       // this.getAll();
       console.log(res);
     });

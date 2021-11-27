@@ -17,11 +17,11 @@ const Login = ({ children, formErrors, modifiedData, onChange, onSubmit, request
 
   return (
     <>
-      <Section textAlign="center">
+      <Section textAlign="center" className="logo-section" style={{ backgroundColor:"#ffffff",margin:"auto",width: "41.6rem" }}>
         <Logo />
       </Section>
       <Section >
-        <BaselineAlignment top size="25px">
+        <BaselineAlignment>
           <Box errorMessage={get(requestError, 'errorMessage', null)}>
             <form onSubmit={onSubmit}>
               <Input
@@ -52,7 +52,7 @@ const Login = ({ children, formErrors, modifiedData, onChange, onSubmit, request
                 value={modifiedData.rememberMe}
               />
               <BaselineAlignment top size="27px">
-                <Button type="submit" color="primary" textTransform="uppercase">
+                <Button type="submit" style={{ background: '008fce' }} textTransform="uppercase">
                   {formatMessage({ id: 'Auth.form.button.login' })}
                 </Button>
               </BaselineAlignment>

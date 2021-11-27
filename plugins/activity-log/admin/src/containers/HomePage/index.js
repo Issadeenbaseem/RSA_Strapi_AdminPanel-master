@@ -3,6 +3,12 @@ import Table from "./table";
 import axios from "axios";
 import Wrapper from "./Wrapper";
 
+
+const api = axios.create({
+  baseURL:`http://localhost:1337`
+})
+
+
  class index extends Component {
 
    constructor(){
@@ -17,7 +23,7 @@ import Wrapper from "./Wrapper";
   }
 
   async getAll() {
-    axios.get("http://localhost:1337/activities").then((res) => {
+    api.get("/activities").then((res) => {
       this.setState({
         data: res.data,
       });

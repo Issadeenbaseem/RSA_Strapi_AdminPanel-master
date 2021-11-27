@@ -4,6 +4,10 @@ import "./app.css";
 import ReactJson from 'react-json-view'
 import Wrapper from "./Wrapper";
 
+const api = axios.create({
+  baseURL:`http://localhost:1337`
+})
+
 
  class index extends Component {
   constructor() {
@@ -22,9 +26,9 @@ import Wrapper from "./Wrapper";
   
 
   async getId() {
-    await axios
+    await api
       .get(
-        `http://localhost:1337/activities/${this.props.match.params.id}`
+        `/activities/${this.props.match.params.id}`
       )
       .then((res) => {
         this.setState({

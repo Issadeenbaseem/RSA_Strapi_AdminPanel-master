@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+const api = axios.create({
+  baseURL:`http://localhost:1337`
+})
+
  class updateApproval extends Component { 
 
   constructor(){
@@ -23,7 +27,7 @@ import React, { Component } from 'react'
 
   async getAll(){
 
-   axios.get('http://localhost:1337/advertisements/approved/').then(res =>{
+   api.get('/advertisements/approved/').then(res =>{
 
 
       this.setState({

@@ -3,6 +3,10 @@ import axios from "axios";
 import "./app.css";
 
 
+const api = axios.create({
+  baseURL:`http://localhost:1337`
+})
+
 export default class HomePage extends Component {
   constructor() {
     super();
@@ -25,29 +29,29 @@ export default class HomePage extends Component {
   }
 
   async getAll() {
-    axios.get("http://localhost:1337/advertisements/count/").then((res) => {
+    api.get("/advertisements/count/").then((res) => {
       console.log(res);
 
       this.setState({
         count_advertisements: res.data,
       });
     });
-    axios.get("http://localhost:1337/categories/count/").then((res) => {
+    api.get("/categories/count/").then((res) => {
       console.log(res);
 
       this.setState({
         count_categories: res.data,
       });
     });
-    axios.get("http://localhost:1337/customers/count").then((res) => {
+    api.get("/customers/count").then((res) => {
       console.log(res);
 
       this.setState({
         count_customers: res.data,
       });
     });
-    axios
-      .get("http://localhost:1337/advertisements/advertisements_reject_count")
+    api
+      .get("/advertisements/advertisements_reject_count")
       .then((res) => {
         console.log(res);
 
@@ -55,8 +59,8 @@ export default class HomePage extends Component {
           count_reject: res.data,
         });
       });
-    axios
-      .get("http://localhost:1337/advertisements/advertisements_panding_count")
+    api
+      .get("/advertisements/advertisements_panding_count")
       .then((res) => {
         console.log(res);
 
@@ -64,8 +68,8 @@ export default class HomePage extends Component {
           count_panding: res.data,
         });
       });
-    axios
-      .get("http://localhost:1337/advertisements/advertisements_approved_count")
+    api
+      .get("/advertisements/advertisements_approved_count")
       .then((res) => {
         console.log(res);
 
@@ -73,8 +77,8 @@ export default class HomePage extends Component {
           count_approved: res.data,
         });
       });
-      axios
-      .get("http://localhost:1337/cities/count")
+      api
+      .get("/cities/count")
       .then((res) => {
         console.log(res);
 
@@ -82,8 +86,8 @@ export default class HomePage extends Component {
           count_cities: res.data,
         });
       });
-      axios
-      .get("http://localhost:1337/cities/count")
+      api
+      .get("/cities/count")
       .then((res) => {
         console.log(res);
 
@@ -91,8 +95,8 @@ export default class HomePage extends Component {
           count_countries: res.data,
         });
       });
-      axios
-      .get("http://localhost:1337/states/count")
+      api
+      .get("/states/count")
       .then((res) => {
         console.log(res);
 
@@ -112,8 +116,8 @@ export default class HomePage extends Component {
 
 
 
-
-
+<>
+<title>Adylet</title>
 
     <div class="main-content">
 
@@ -220,6 +224,7 @@ export default class HomePage extends Component {
   </div>
 
 
+  </>
 
 
     );

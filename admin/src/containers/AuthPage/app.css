@@ -4,3 +4,15 @@ body{
   background-image: url('../../assets/images/background_empty.jpg');
 
 }
+
+.auth-page,
+#app,
+#app > div:first-child,
+#app > div:first-child > div:last-child {
+  height: 100%;
+}
+
+.logo-section img{
+  margin:15px 0
+
+}
