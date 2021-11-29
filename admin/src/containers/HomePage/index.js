@@ -151,7 +151,7 @@ export default class HomePage extends Component {
             <span>Panding Advertisements </span>
           </div>
           <div>
-            <span class="fas fa-info-circle"></span>
+            <span class="fas fa-user-cog"></span>
           </div>
         </div>
          <div class="card-single">
@@ -160,7 +160,7 @@ export default class HomePage extends Component {
             <span>Approved Advertisements </span>
           </div>
           <div>
-            <span class="fas fa-check-circle"></span>
+            <span class="fas fa-user-check"></span>
           </div>
         </div>
         <div class="card-single">
@@ -169,7 +169,7 @@ export default class HomePage extends Component {
             <span>Reject Advertisements </span>
           </div>
           <div>
-          <img src="./assert/1.png" style={{width:"100%",height:"100%"}}/>
+          <span class="fas fa-user-alt-slash"></span>
           </div>
         </div>
 
