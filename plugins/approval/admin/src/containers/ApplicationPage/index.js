@@ -13,9 +13,9 @@ import Gallery from "react-grid-gallery";
 //import "bootstrap/dist/css/bootstrap.min.css";
 
 
-const api = axios.create({
-  baseURL:`http://localhost:1337`
-})
+// const api = axios.create({
+//   baseURL:`http://localhost:1337`
+// })
 
 class index extends Component {
   constructor() {
@@ -45,7 +45,7 @@ class index extends Component {
   
 
   async getId() {
-    await api
+    await axios
       .get(
         `/advertisements/approved/${this.props.match.params.id}`
       )
@@ -78,7 +78,7 @@ class index extends Component {
       approved_date: new Date().toISOString()
      }
 
-    api.put(`/Approval/${data.id}`, data).then((res) => {
+     axios.put(`/Approval/${data.id}`, data).then((res) => {
       // this.getAll();
       // console.log(res);
     });

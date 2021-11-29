@@ -15,6 +15,7 @@
     "approval": "^1.0.24",
     "axios": "^0.24.0",
     "knex": "0.21.18",
+    "moment": "^2.29.1",
     "mysql": "2.18.1",
     "react-grid-gallery": "^0.5.5",
     "react-json-view": "^1.21.3",

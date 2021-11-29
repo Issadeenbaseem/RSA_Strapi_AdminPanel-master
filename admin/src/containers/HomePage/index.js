@@ -3,9 +3,9 @@ import axios from "axios";
 import "./app.css";
 
 
-const api = axios.create({
-  baseURL:`http://localhost:1337`
-})
+// const api = axios.create({
+//   baseURL:`http://localhost:1337`
+// })
 
 export default class HomePage extends Component {
   constructor() {
@@ -29,28 +29,28 @@ export default class HomePage extends Component {
   }
 
   async getAll() {
-    api.get("/advertisements/count/").then((res) => {
+    axios.get("/advertisements/count/").then((res) => {
       console.log(res);
 
       this.setState({
         count_advertisements: res.data,
       });
     });
-    api.get("/categories/count/").then((res) => {
+    axios.get("/categories/count/").then((res) => {
       console.log(res);
 
       this.setState({
         count_categories: res.data,
       });
     });
-    api.get("/customers/count").then((res) => {
+    axios.get("/customers/count").then((res) => {
       console.log(res);
 
       this.setState({
         count_customers: res.data,
       });
     });
-    api
+    axios
       .get("/advertisements/advertisements_reject_count")
       .then((res) => {
         console.log(res);
@@ -59,7 +59,7 @@ export default class HomePage extends Component {
           count_reject: res.data,
         });
       });
-    api
+      axios
       .get("/advertisements/advertisements_panding_count")
       .then((res) => {
         console.log(res);
@@ -68,7 +68,7 @@ export default class HomePage extends Component {
           count_panding: res.data,
         });
       });
-    api
+      axios
       .get("/advertisements/advertisements_approved_count")
       .then((res) => {
         console.log(res);
@@ -77,7 +77,7 @@ export default class HomePage extends Component {
           count_approved: res.data,
         });
       });
-      api
+      axios
       .get("/cities/count")
       .then((res) => {
         console.log(res);
@@ -86,8 +86,8 @@ export default class HomePage extends Component {
           count_cities: res.data,
         });
       });
-      api
-      .get("/cities/count")
+      axios
+      .get("/countries/count")
       .then((res) => {
         console.log(res);
 
@@ -95,7 +95,7 @@ export default class HomePage extends Component {
           count_countries: res.data,
         });
       });
-      api
+      axios
       .get("/states/count")
       .then((res) => {
         console.log(res);
@@ -110,20 +110,14 @@ export default class HomePage extends Component {
     return (
 
 
-
-
-
-
-
-
 <>
 <title>Adylet</title>
 
-    <div class="main-content">
+
 
 
     <main>
-      <div class="cards">
+      <div class="cards ">
         <div class="card-single">
           <div>
             <h1>{ this.state.count_customers}</h1>
@@ -175,7 +169,7 @@ export default class HomePage extends Component {
             <span>Reject Advertisements </span>
           </div>
           <div>
-            <span class="fa fa-ban"></span>
+          <img src="./assert/1.png" style={{width:"100%",height:"100%"}}/>
           </div>
         </div>
 
@@ -221,7 +215,7 @@ export default class HomePage extends Component {
 
 
     </main>
-  </div>
+
 
 
   </>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { DatePicker } from "antd";
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 
 import "antd/dist/antd.css";
@@ -13,12 +14,15 @@ const AntDatepicker = ({onChange, name, value}) => {
     <div>
      
      <label>{name}</label>
-      <div style={{marginTop: '4px'}}>
+      <div style={{marginTop: '4px' }}>
       <DatePicker 
        data={value}
+       style={{ width: 250 }}
+       value={value ? moment(value, 'YYYY-MM-DD') : null}
        onChange={(event, val) => {
          onChange({ target: { name, value: val } });
        }}
+
       />
       </div>
       

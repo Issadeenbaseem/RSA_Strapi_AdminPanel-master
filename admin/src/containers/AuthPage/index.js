@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 import Background from "../../assets/images/background_empty.jpg"
-import './app.css'
 import axios from 'axios';
+import "./app.css";
 import { camelCase, get, omit, upperFirst } from 'lodash';
 import { Redirect, useRouteMatch, useHistory } from 'react-router-dom';
 import { BaselineAlignment, auth, useQuery } from 'strapi-helper-plugin';
@@ -290,13 +290,18 @@ const AuthPage = ({ hasAdmin, setHasAdmin }) => {
   }
 
   return (
-    <div className="auth-page" style={{ backgroundImage: `url(${Background})` }}>
-      <Padded bottom size="md">
+    <div className="auth" style={{ backgroundImage: `url(${Background})` }}>
+      <Padded
+        top
+        bottom
+        right
+        left
+        size="lg">
       <PageTitle title={upperFirst(authType)} />
       <NavTopRightWrapper>
         <LocaleToggle isLogged className="localeDropdownMenuNotLogged" />
       </NavTopRightWrapper>
-      <BaselineAlignment top size="78px">
+
         <Component
           {...rest}
           fieldsToDisable={fieldsToDisable}
@@ -307,7 +312,7 @@ const AuthPage = ({ hasAdmin, setHasAdmin }) => {
           onSubmit={handleSubmit}
           requestError={requestError}
         />
-      </BaselineAlignment>
+     
     </Padded>
     </div>
 
