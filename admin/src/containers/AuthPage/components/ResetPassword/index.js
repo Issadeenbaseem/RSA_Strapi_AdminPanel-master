@@ -16,11 +16,11 @@ const ResetPassword = ({ formErrors, modifiedData, onChange, onSubmit, requestEr
 
   return (
     <>
-      <Section textAlign="center">
+      <Section textAlign="center" className="logo-section" style={{ backgroundColor:"#ffffff",margin:"auto",width: "41.6rem" }}>
         <Logo />
       </Section>
-      <Section withBackground>
-        <BaselineAlignment top size="25px">
+      <Section >
+        <BaselineAlignment >
           <Box errorMessage={get(requestError, 'errorMessage', null)}>
             <form onSubmit={onSubmit}>
               <Input

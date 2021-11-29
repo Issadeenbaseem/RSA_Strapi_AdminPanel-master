@@ -23,13 +23,13 @@ const Oops = () => {
 
   return (
     <>
-      <Section textAlign="center">
+      <Section textAlign="center" className="logo-section" style={{ backgroundColor:"#ffffff",margin:"auto",width: "41.6rem" }}>
         <Logo />
       </Section>
-      <Section withBackground textAlign="center">
-        <BaselineAlignment top size="25px">
+      <Section textAlign="center">
+        <BaselineAlignment >
           <Box withoutError>
-            <Padded top>
+            <Padded></Padded>
               <Padded top size="xs">
                 <Img src={OopsLogo} alt="oops" />
               </Padded>
