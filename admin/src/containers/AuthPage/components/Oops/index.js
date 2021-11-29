@@ -29,7 +29,7 @@ const Oops = () => {
       <Section textAlign="center">
         <BaselineAlignment >
           <Box withoutError>
-            <Padded></Padded>
+            <Padded>
               <Padded top size="xs">
                 <Img src={OopsLogo} alt="oops" />
               </Padded>
