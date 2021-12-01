@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Table } from "@buffetjs/core";
 import { withRouter } from "react-router";
-import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
 class table extends Component {
@@ -24,6 +23,7 @@ class table extends Component {
   }
 
   render() {
+    
     const headers = [
       {
         name: "ID",
@@ -39,7 +39,7 @@ class table extends Component {
       },
       {
         name: "Updated Date",
-        value: "updated_at",
+        value: "published_at",
       },
     ];
     const handleClick = (id) => {
@@ -56,6 +56,7 @@ class table extends Component {
     return (
       <div>
         <Table
+          
           headers={headers}
           rows={this.state.rows}
           onClickRow={(e, data) => {

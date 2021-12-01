@@ -6,7 +6,7 @@ const colors = {
   lightOrange: '#f64d0a',
   yellow: '#ffd500',
   green: '#6dbb1a',
-  blue: '#0097f7',
+  blue: '#008fce',
   teal: '#5bc0de',
   pink: '#ff5b77',
   purple: '#613d7c',
@@ -30,7 +30,7 @@ const colors = {
   darkBlue: '#aed4fb',
   pale: '#f7f8f8',
   content: {
-    background: '#F71735',
+    background: '#fffff',
     'background-alpha': 'rgba(14, 22, 34, 0.02)',
   },
   leftMenu: {

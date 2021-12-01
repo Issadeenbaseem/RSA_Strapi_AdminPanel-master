@@ -43,6 +43,7 @@ class index extends Component {
     
   }
   
+  
 
   async getId() {
     await axios
@@ -172,14 +173,14 @@ class index extends Component {
                     <b>Customer Name :</b> {this.state.customer} <br /><br />
                   </p>
 
-                  <p>
+                  <p >
                     {" "}
-                    <b>Created Date :</b> {this.state.date}<br /><br />
+                    <b>Created Date :</b> {this.state.date.substring(0, 10)}<br /><br />
                   </p>
 
                   <p>
                     {" "}
-                    <b>City :</b> {this.state.city}<br /><br />
+                    <b>City :</b> {this.state.city}<br/><br />
                   </p>
 
                   <p>
@@ -188,7 +189,7 @@ class index extends Component {
 
                   <p>
                     {" "}
-                    <b>Price :</b> {this.state.price}<br /><br />
+                    <b>Price :</b> {this.state.price}<br/><br />
                   </p>
                 </div>
               
@@ -199,6 +200,8 @@ class index extends Component {
               <h3 className="header-1">Advertisement Pictures</h3>
               <div>
                 <Gallery
+                    
+                  backdropClosesModal={true}
                   className="container-c4"
                   images={this.state.images.map((e) => {
                     return {
